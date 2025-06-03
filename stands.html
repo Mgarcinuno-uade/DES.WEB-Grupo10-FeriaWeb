@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stands y Productos - Feria Sustentable Itinerante</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Feria Sustentable">
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicaciones.html">Donde nos encontramos</a></li>
+                <li><a href="stands.html" class="active">Stands/Productos</a></li>
+                <li><a href="actividades.html">Atracciones y actividades</a></li>
+                <li><a href="compras.html">Compras online</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Stands y Productos</h1>
+                <p>Descubre la variedad de productos sustentables que ofrecemos en nuestra feria</p>
+            </div>
+        </section>
+
+        <!-- Filtros y búsqueda -->
+        <section class="filtros-productos">
+            <div class="container">
+                <div class="filtros-header">
+                    <h2>Explora nuestros productos</h2>
+                    <div class="busqueda-container">
+                        <input type="text" id="busquedaProductos" placeholder="Buscar productos o expositores...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="categorias-tabs">
+                    <button class="tab-btn active" data-categoria="todos">Todas las Categorías</button>
+                    <button class="tab-btn" data-categoria="alimentacion">
+                        <i class="fas fa-apple-alt"></i>
+                        Alimentación
+                    </button>
+                    <button class="tab-btn" data-categoria="textiles">
+                        <i class="fas fa-tshirt"></i>
+                        Textiles
+                    </button>
+                    <button class="tab-btn" data-categoria="cosmetica">
+                        <i class="fas fa-spa"></i>
+                        Cosmética
+                    </button>
+                    <button class="tab-btn" data-categoria="tecnologia">
+                        <i class="fas fa-solar-panel"></i>
+                        Tecnología
+                    </button>
+                    <button class="tab-btn" data-categoria="artesanias">
+                        <i class="fas fa-palette"></i>
+                        Artesanías
+                    </button>
+                    <button class="tab-btn" data-categoria="hogar">
+                        <i class="fas fa-home"></i>
+                        Hogar
+                    </button>
+                </div>
+
+                <div class="filtros-adicionales">
+                    <div class="filtro-grupo">
+                        <label>Certificaciones:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="organico">
+                                <span>Orgánico</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="comercio-justo">
+                                <span>Comercio Justo</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="vegano">
+                                <span>Vegano</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="local">
+                                <span>Producción Local</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Grid -->
+        <section class="productos-section">
+            <div class="container">
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Alimentación -->
+                    <div class="producto-card" data-categoria="alimentacion" data-certificaciones="organico,local">
+                        <div class="producto-imagen">
+                            <img src="img/prodorganicos.jpg" alt="Productos Orgánicos">
+                            <div class="producto-badges">
+                                <span class="badge organico">Orgánico</span>
+                                <span class="badge local">Local</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Productos Orgánicos</h3>
+                            <p class="categoria-tag">Alimentación</p>
+                            <p class="descripcion">Frutas, verduras y granos cultivados sin pesticidas ni químicos artificiales. Directamente del productor a tu mesa.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>15+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Córdoba y alrededores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$500 - $2,000</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('alimentacion')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('alimentacion')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card" data-categoria="alimentacion" data-certificaciones="vegano,organico">
+                        <div class="producto-imagen">
+                            <img src="img/prodveganos.jpg" alt="Productos Veganos">
+                            <div class="producto-badges">
+                                <span class="badge vegano">Vegano</span>
+                                <span class="badge organico">Orgánico</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Productos Veganos</h3>
+                            <p class="categoria-tag">Alimentación</p>
+                            <p class="descripcion">Alternativas plant-based para una alimentación más consciente. Quesos, leches vegetales, hamburguesas y más.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>18+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>100% Plant-based</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$300 - $1,500</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('veganos')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('veganos')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Textiles -->
+                    <div class="producto-card" data-categoria="textiles" data-certificaciones="organico,comercio-justo">
+                        <div class="producto-imagen">
+                            <img src="img/ropaorganica.jpg" alt="Ropa Ecológica">
+                            <div class="producto-badges">
+                                <span class="badge organico">Algodón Orgánico</span>
+                                <span class="badge comercio-justo">Comercio Justo</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Ropa Ecológica</h3>
+                            <p class="categoria-tag">Textiles</p>
+                            <p class="descripcion">Prendas fabricadas con materiales sustentables y procesos eco-friendly. Moda consciente para toda la familia.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>12+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-recycle"></i>
+                                    <span>Materiales reciclados</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$800 - $5,000</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('textiles')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('textiles')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card" data-categoria="textiles" data-certificaciones="local">
+                        <div class="producto-imagen">
+                            <img src="img/accesoriossus.jpg" alt="Accesorios Sustentables">
+                            <div class="producto-badges">
+                                <span class="badge local">Producción Local</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Accesorios Sustentables</h3>
+                            <p class="categoria-tag">Textiles</p>
+                            <p class="descripcion">Bolsos, carteras, cinturones y accesorios hechos con materiales reciclados y técnicas artesanales.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>8+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-hands"></i>
+                                    <span>Hecho a mano</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$400 - $2,500</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('accesorios')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('accesorios')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cosmética -->
+                    <div class="producto-card" data-categoria="cosmetica" data-certificaciones="organico,vegano">
+                        <div class="producto-imagen">
+                            <img src="img/cosmetica.jpg" alt="Cosmética Natural">
+                            <div class="producto-badges">
+                                <span class="badge organico">Natural</span>
+                                <span class="badge vegano">Cruelty Free</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Cosmética Natural</h3>
+                            <p class="categoria-tag">Cosmética</p>
+                            <p class="descripcion">Productos de belleza e higiene elaborados con ingredientes naturales. Sin químicos dañinos ni testeo en animales.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>20+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Sin químicos</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$200 - $1,200</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('cosmetica')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('cosmetica')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecnología -->
+                    <div class="producto-card" data-categoria="tecnologia" data-certificaciones="local">
+                        <div class="producto-imagen">
+                            <img src="img/tecnologicaverde.png" alt="Tecnología Verde">
+                            <div class="producto-badges">
+                                <span class="badge local">Innovación Local</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Tecnología Verde</h3>
+                            <p class="categoria-tag">Tecnología</p>
+                            <p class="descripcion">Soluciones tecnológicas para un hogar más sustentable. Paneles solares, sistemas de ahorro energético y más.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>8+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Ahorro energético</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$2,000 - $50,000</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('tecnologia')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('tecnologia')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Artesanías -->
+                    <div class="producto-card" data-categoria="artesanias" data-certificaciones="local">
+                        <div class="producto-imagen">
+                            <img src="img/artesanias.jpg" alt="Artesanías Sustentables">
+                            <div class="producto-badges">
+                                <span class="badge local">Hecho a Mano</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Artesanías Sustentables</h3>
+                            <p class="categoria-tag">Artesanías</p>
+                            <p class="descripcion">Objetos únicos creados con materiales reciclados y técnicas tradicionales. Arte funcional y decorativo.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>25+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-recycle"></i>
+                                    <span>Materiales reciclados</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$150 - $3,000</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('artesanias')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('artesanias')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hogar -->
+                    <div class="producto-card" data-categoria="hogar" data-certificaciones="organico,local">
+                        <div class="producto-imagen">
+                            <img src="/img/hogaverde.jpg" alt="Productos para el Hogar">
+                            <div class="producto-badges">
+                                <span class="badge organico">Eco-friendly</span>
+                                <span class="badge local">Local</span>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Productos para el Hogar</h3>
+                            <p class="categoria-tag">Hogar</p>
+                            <p class="descripcion">Productos de limpieza naturales, decoración sustentable y utensilios ecológicos para tu hogar.</p>
+                            <div class="producto-detalles">
+                                <div class="detalle-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>14+ expositores</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-home"></i>
+                                    <span>Hogar sustentable</span>
+                                </div>
+                                <div class="detalle-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$100 - $2,000</span>
+                                </div>
+                            </div>
+                            <div class="producto-acciones">
+                                <button class="btn btn-small" onclick="verExpositores('hogar')">Ver Expositores</button>
+                                <button class="btn btn-small btn-secondary" onclick="contactarCategoria('hogar')">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-resultados" id="noResultados" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No se encontraron productos</h3>
+                    <p>Intenta con otros filtros o términos de búsqueda</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expositores Destacados -->
+        <section class="expositores-destacados">
+            <div class="container">
+                <h2>Expositores Destacados</h2>
+                <p class="section-subtitle">Conoce a algunos de nuestros expositores más reconocidos</p>
+                
+                <div class="expositores-grid">
+                    <div class="expositor-card" data-categoria="alimentacion">
+                        <div class="expositor-imagen">
+                            <img src="img/tecnologicaverde.png" alt="EcoVida">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>EcoVida</h3>
+                            <p class="expositor-categoria">Productos Orgánicos</p>
+                            <p class="expositor-descripcion">Especialistas en frutas y verduras orgánicas certificadas. 15 años de experiencia en agricultura sustentable.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Córdoba Capital</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certificación Orgánica</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('ecovida')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('ecovida')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expositor-card" data-categoria="cosmetica">
+                        <div class="expositor-imagen">
+                            <img src="img/verdenatural.jpg" alt="Verde Natural">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>Verde Natural</h3>
+                            <p class="expositor-categoria">Cosmética Natural</p>
+                            <p class="expositor-descripcion">Cosmética artesanal elaborada con ingredientes naturales y aceites esenciales de la región.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Villa Carlos Paz</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Cruelty Free</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('verde-natural')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('verde-natural')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expositor-card" data-categoria="tecnologia">
+                        <div class="expositor-imagen">
+                            <img src="img/solartech.png" alt="Solar Tech">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>Solar Tech</h3>
+                            <p class="expositor-categoria">Tecnología Verde</p>
+                            <p class="expositor-descripcion">Soluciones de energía solar para hogares y empresas. Instalación y mantenimiento incluido.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Río Cuarto</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-solar-panel"></i>
+                                    <span>Energía Renovable</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('solar-tech')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('solar-tech')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expositor-card" data-categoria="textiles">
+                        <div class="expositor-imagen">
+                            <img src="img/ropaorganica.jpg" alt="Textiles Eco">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>Textiles Eco</h3>
+                            <p class="expositor-categoria">Ropa Sustentable</p>
+                            <p class="expositor-descripcion">Moda ética y sustentable. Ropa fabricada con algodón orgánico y procesos de comercio justo.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>San Francisco</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Algodón Orgánico</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('textiles-eco')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('textiles-eco')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expositor-card" data-categoria="artesanias">
+                        <div class="expositor-imagen">
+                            <img src="img/arterec.jpg" alt="Arte Reciclado">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>Arte Reciclado</h3>
+                            <p class="expositor-categoria">Artesanías</p>
+                            <p class="expositor-descripcion">Creaciones únicas elaboradas con materiales reciclados. Arte funcional y decorativo para el hogar.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Villa María</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-recycle"></i>
+                                    <span>100% Reciclado</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('arte-reciclado')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('arte-reciclado')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expositor-card" data-categoria="hogar">
+                        <div class="expositor-imagen">
+                            <img src="img/hogaverde.jpg" alt="Hogar Verde">
+                            <div class="expositor-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="expositor-info">
+                            <h3>Hogar Verde</h3>
+                            <p class="expositor-categoria">Productos para el Hogar</p>
+                            <p class="expositor-descripcion">Productos de limpieza naturales y utensilios ecológicos para un hogar más sustentable.</p>
+                            <div class="expositor-detalles">
+                                <div class="detalle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>La Falda</span>
+                                </div>
+                                <div class="detalle">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Ingredientes Naturales</span>
+                                </div>
+                            </div>
+                            <div class="expositor-contacto">
+                                <button class="btn btn-small" onclick="contactarExpositor('hogar-verde')">Contactar</button>
+                                <button class="btn btn-small btn-secondary" onclick="verProductosExpositor('hogar-verde')">Ver Productos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información para Expositores -->
+        <section class="info-expositores">
+            <div class="container">
+                <div class="info-content">
+                    <div class="info-text">
+                        <h2>¿Quieres ser expositor?</h2>
+                        <p>Únete a nuestra comunidad de emprendedores sustentables y lleva tus productos a toda la provincia de Córdoba.</p>
+                        
+                        <div class="beneficios-grid">
+                            <div class="beneficio-item">
+                                <i class="fas fa-users"></i>
+                                <h4>Amplia Audiencia</h4>
+                                <p>Acceso a más de 50,000 visitantes anuales</p>
+                            </div>
+                            <div class="beneficio-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>Múltiples Ubicaciones</h4>
+                                <p>Presencia en 25 ciudades de Córdoba</p>
+                            </div>
+                            <div class="beneficio-item">
+                                <i class="fas fa-handshake"></i>
+                                <h4>Networking</h4>
+                                <p>Conecta con otros emprendedores sustentables</p>
+                            </div>
+                            <div class="beneficio-item">
+                                <i class="fas fa-bullhorn"></i>
+                                <h4>Promoción</h4>
+                                <p>Marketing y promoción en nuestras redes</p>
+                            </div>
+                        </div>
+
+                        <div class="requisitos">
+                            <h3>Requisitos para ser expositor:</h3>
+                            <ul>
+                                <li>Productos sustentables y ecológicos</li>
+                                <li>Certificaciones de calidad (cuando aplique)</li>
+                                <li>Compromiso con prácticas responsables</li>
+                                <li>Disponibilidad para múltiples fechas</li>
+                            </ul>
+                        </div>
+
+                        <div class="cta-expositor">
+                            <a href="contacto.html" class="btn">Aplicar como Expositor</a>
+                            <a href="#" class="btn btn-secondary" onclick="descargarInfo()">Descargar Info</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-imagen">
+                        <img src="/placeholder.svg?height=400&width=500" alt="Expositores en la feria">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo - blanco.png" alt="Logo Feria Sustentable">
+                <p>Conectando comunidades con un futuro más verde</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="compras.html">Promociones</a></li>
+                    <li><a href="stands.html">Stands y Productos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@feriasustentable.com</p>
+                <p><i class="fas fa-phone"></i> +54 9 011 1111-2222</p>
+                <p><i class="fas fa-map-marker-alt"></i>Argentina</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feria Sustentable Itinerante. Grupo 10 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/stands.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Feria Sustentable Itinerante</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Feria Sustentable">
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicaciones.html">Donde nos encontramos</a></li>
+                <li><a href="stands.html" >Stands/Productos</a></li>
+                <li><a href="actividades.html">Atracciones y actividades</a></li>
+                <li><a href="compras.html">Compras online</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p>¿Tienes preguntas? Estamos aquí para ayudarte</p>
+            </div>
+        </section>
+
+        <!-- Información de Contacto -->
+        <section class="info-contacto">
+            <div class="container">
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h2>Información de Contacto</h2>
+                        
+                        <div class="contacto-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Teléfono</h3>
+                                <p>+54 9 351 456-7890</p>
+                                <span>Lunes a Viernes 9:00 - 18:00</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@feriasustentable.com</p>
+                                <span>Respuesta en 24 horas</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Oficina Central</h3>
+                                <p>Av. Colón 123, Córdoba Capital</p>
+                                <span>Córdoba, Argentina</span>
+                            </div>
+                        </div>
+
+                        <div class="contacto-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horarios</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                <p>Sábados: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="formulario-contacto">
+                        <h2>Envíanos un Mensaje</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="informacion">Información General</option>
+                                    <option value="expositor">Quiero ser Expositor</option>
+                                    <option value="voluntario">Quiero ser Voluntario</option>
+                                    <option value="accesibilidad">Consulta de Accesibilidad</option>
+                                    <option value="prensa">Consulta de Prensa</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>¿Cuál es el costo de entrada?</h3>
+                        <p>La entrada a la feria es completamente gratuita. Solo se cobra por algunos talleres específicos.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Puedo llevar mascotas?</h3>
+                        <p>Sí, las mascotas son bienvenidas siempre que estén con correa y al cuidado de su dueño.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Hay estacionamiento?</h3>
+                        <p>Sí, todos nuestros predios cuentan con estacionamiento gratuito.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Qué debo traer a los talleres?</h3>
+                        <p>Cada taller especifica los materiales necesarios. Generalmente proporcionamos todo lo necesario.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Cómo puedo ser expositor?</h3>
+                        <p>Puedes aplicar a través de nuestro formulario seleccionando "Quiero ser Expositor".</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>¿Se realiza con lluvia?</h3>
+                        <p>Sí, contamos con carpas y espacios cubiertos. En casos extremos, informamos por redes sociales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redes Sociales -->
+        <section class="redes-sociales">
+            <div class="container">
+                <h2>Síguenos en Redes Sociales</h2>
+                <div class="redes-grid">
+                    <a href="#" class="red-social facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="red-social instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="red-social twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="red-social youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo - blanco.png" alt="Logo Feria Sustentable">
+                <p>Conectando comunidades con un futuro más verde</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="compras.html">Promociones</a></li>
+                    <li><a href="stands.html">Stands y Productos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@feriasustentable.com</p>
+                <p><i class="fas fa-phone"></i> +54 9 011 1111-2222</p>
+                <p><i class="fas fa-map-marker-alt"></i>Argentina</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feria Sustentable Itinerante. Grupo 10 Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

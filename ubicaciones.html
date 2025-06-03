@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde nos encontramos - Feria Sustentable Itinerante</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Feria Sustentable">
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicaciones.html" class="active">Donde nos encontramos</a></li>
+                <li><a href="stands.html">Stands/Productos</a></li>
+                <li><a href="actividades.html">Atracciones y actividades</a></li>
+                <li><a href="compras.html">Compras online</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Donde nos encontramos</h1>
+                <p>Encuentra la feria más cercana a tu ciudad con horarios y opciones de accesibilidad</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros-ubicaciones">
+            <div class="container">
+                <div class="filtros-grid">
+                    <div class="filtro-grupo">
+                        <label>Filtrar por mes:</label>
+                        <div class="filtro-buttons">
+                            <button class="filtro-btn active" data-mes="todos">Todos</button>
+                            <button class="filtro-btn" data-mes="marzo">Marzo</button>
+                            <button class="filtro-btn" data-mes="abril">Abril</button>
+                            <button class="filtro-btn" data-mes="mayo">Mayo</button>
+                            <button class="filtro-btn" data-mes="junio">Junio</button>
+                        </div>
+                    </div>
+                    <div class="filtro-grupo">
+                        <label>Filtrar por región:</label>
+                        <div class="filtro-buttons">
+                            <button class="region-btn active" data-region="todas">Todas</button>
+                            <button class="region-btn" data-region="capital">Capital</button>
+                            <button class="region-btn" data-region="sierras">Sierras</button>
+                            <button class="region-btn" data-region="sur">Sur</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicaciones -->
+        <section class="ubicaciones-section">
+            <div class="container">
+                <div class="ubicaciones-grid">
+                    <!-- Córdoba Capital -->
+                    <div class="ubicacion-card" data-mes="marzo" data-region="capital">
+                        <div class="ubicacion-imagen">
+                             <img src="img/cordoba.jpg"  alt="Córdoba Capital">
+                            <div class="fecha-overlay">
+                                <span class="dia">15</span>
+                                <span class="mes">MAR</span>
+                            </div>
+                            <div class="estado-badge proximo">¡Próximo!</div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>Córdoba Capital</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Plaza San Martín</p>
+                            <p class="direccion-completa">Av. General Paz y 27 de Abril</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Vie 15: 9:00-18:00</span>
+                                    <span>Sáb 16: 9:00-19:00</span>
+                                    <span>Dom 17: 10:00-18:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>80+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>200 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Food trucks</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Intérprete de señas">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Sistema de amplificación">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('cordoba-capital')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('cordoba-15-mar')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Villa Carlos Paz -->
+                    <div class="ubicacion-card" data-mes="marzo" data-region="sierras">
+                        <div class="ubicacion-imagen">
+                            <img src="img/villacarlos.jpg" alt="Villa Carlos Paz">
+                            <div class="fecha-overlay">
+                                <span class="dia">22</span>
+                                <span class="mes">MAR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>Villa Carlos Paz</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Centro de la ciudad</p>
+                            <p class="direccion-completa">Av. San Martín 400</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Sáb 22: 10:00-19:00</span>
+                                    <span>Dom 23: 10:00-18:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>60+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>150 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>Vista sierras</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono no-disponible" title="Intérprete de señas no disponible">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Sistema de amplificación">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('villa-carlos-paz')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('vcp-22-mar')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Río Cuarto -->
+                    <div class="ubicacion-card" data-mes="marzo" data-region="sur">
+                        <div class="ubicacion-imagen">
+                            <img src="img/RioCuarto.jpg" alt="Río Cuarto">
+                            <div class="fecha-overlay">
+                                <span class="dia">29</span>
+                                <span class="mes">MAR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>Río Cuarto</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Plaza Olmos</p>
+                            <p class="direccion-completa">Constitución y Rivadavia</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Vie 29: 9:00-17:00</span>
+                                    <span>Sáb 30: 9:00-18:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>70+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>180 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Transporte público</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Intérprete de señas">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono no-disponible" title="Sistema de amplificación no disponible">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('rio-cuarto')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('rc-29-mar')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- San Francisco -->
+                    <div class="ubicacion-card" data-mes="abril" data-region="capital">
+                        <div class="ubicacion-imagen">
+                            <img src="img/san fran.jpg?height=200&width=350" alt="San Francisco">
+                            <div class="fecha-overlay">
+                                <span class="dia">05</span>
+                                <span class="mes">ABR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>San Francisco</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Plaza 25 de Mayo</p>
+                            <p class="direccion-completa">Av. de la Universidad y Córdoba</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Sáb 05: 9:00-18:00</span>
+                                    <span>Dom 06: 10:00-17:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>55+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>120 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-child"></i>
+                                    <span>Área niños</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono no-disponible" title="Intérprete de señas no disponible">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Sistema de amplificación">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('san-francisco')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('sf-05-abr')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Villa María -->
+                    <div class="ubicacion-card" data-mes="abril" data-region="capital">
+                        <div class="ubicacion-imagen">
+                            <img src="img/villamaria.jpg" alt="Villa María">
+                            <div class="fecha-overlay">
+                                <span class="dia">12</span>
+                                <span class="mes">ABR</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>Villa María</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Parque Sobremonte</p>
+                            <p class="direccion-completa">Av. Sabattini y Tucumán</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Sáb 12: 10:00-19:00</span>
+                                    <span>Dom 13: 10:00-18:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>65+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>160 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-tree"></i>
+                                    <span>Área verde</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Intérprete de señas">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Sistema de amplificación">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('villa-maria')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('vm-12-abr')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- La Falda -->
+                    <div class="ubicacion-card" data-mes="mayo" data-region="sierras">
+                        <div class="ubicacion-imagen">
+                            <img src="img/laalda.png" alt="La Falda">
+                            <div class="fecha-overlay">
+                                <span class="dia">10</span>
+                                <span class="mes">MAY</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ubicacion-info">
+                            <h3>La Falda</h3>
+                            <p class="direccion"><i class="fas fa-map-marker-alt"></i> Plaza Próspero Molina</p>
+                            <p class="direccion-completa">Av. España y 9 de Julio</p>
+                            
+                            <div class="horarios-compacto">
+                                <h4><i class="fas fa-clock"></i> Horarios</h4>
+                                <div class="horarios-lista">
+                                    <span>Sáb 10: 9:00-17:00</span>
+                                    <span>Dom 11: 10:00-16:00</span>
+                                </div>
+                            </div>
+
+                            <div class="caracteristicas">
+                                <div class="caracteristica">
+                                    <i class="fas fa-store"></i>
+                                    <span>45+ stands</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-parking"></i>
+                                    <span>100 espacios</span>
+                                </div>
+                                <div class="caracteristica">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Vista panorámica</span>
+                                </div>
+                            </div>
+
+                            <div class="accesibilidad-compacta">
+                                <h4><i class="fas fa-universal-access"></i> Accesibilidad</h4>
+                                <div class="accesos-iconos">
+                                    <span class="acceso-icono disponible" title="Acceso para sillas de ruedas">
+                                        <i class="fas fa-wheelchair"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Baños accesibles">
+                                        <i class="fas fa-restroom"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Estacionamiento reservado">
+                                        <i class="fas fa-parking"></i>
+                                    </span>
+                                    <span class="acceso-icono no-disponible" title="Intérprete de señas no disponible">
+                                        <i class="fas fa-sign-language"></i>
+                                    </span>
+                                    <span class="acceso-icono disponible" title="Sistema de amplificación">
+                                        <i class="fas fa-volume-up"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ubicacion-acciones">
+                                <button class="btn btn-small" onclick="verMapa('la-falda')">Ver Mapa</button>
+                                <button class="btn btn-small btn-secondary" onclick="compartirEvento('lf-10-may')">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información General -->
+        <section class="info-general">
+            <div class="container">
+                <h2>Información General</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Información General</h3>
+                        <ul>
+                            <li>Entrada gratuita a todas las ferias</li>
+                            <li>Horarios sujetos a condiciones climáticas</li>
+                            <li>Se aceptan mascotas con correa</li>
+                            <li>Prohibido fumar en todo el predio</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-car"></i>
+                        <h3>Transporte y Acceso</h3>
+                        <ul>
+                            <li>Estacionamiento gratuito disponible</li>
+                            <li>Acceso en transporte público</li>
+                            <li>Espacios reservados para discapacitados</li>
+                            <li>Bicicleteros seguros</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Servicios en el Evento</h3>
+                        <ul>
+                            <li>Food trucks con opciones veganas</li>
+                            <li>Baños accesibles</li>
+                            <li>Punto de información</li>
+                            <li>Primeros auxilios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo - blanco.png" alt="Logo Feria Sustentable">
+                <p>Conectando comunidades con un futuro más verde</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="compras.html">Promociones</a></li>
+                    <li><a href="stands.html">Stands y Productos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@feriasustentable.com</p>
+                <p><i class="fas fa-phone"></i> +54 9 011 1111-2222</p>
+                <p><i class="fas fa-map-marker-alt"></i>Argentina</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feria Sustentable Itinerante. Grupo 10 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ubicaciones.js"></script>
+</body>
+</html>

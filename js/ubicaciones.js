@@ -69,34 +69,34 @@ function verMapa(ciudad) {
 
 function compartirEvento(eventoId) {
   const eventos = {
-    "cordoba-15-mar": {
+    "cordoba-15-jun": {
       titulo: "Feria Sustentable - Córdoba Capital",
-      fecha: "15 de Marzo, 2025",
+      fecha: "15 de junio, 2025",
       ubicacion: "Plaza San Martín",
     },
-    "vcp-22-mar": {
+    "vcp-22-jun": {
       titulo: "Feria Sustentable - Villa Carlos Paz",
-      fecha: "22 de Marzo, 2025",
+      fecha: "22 de junio, 2025",
       ubicacion: "Centro de la ciudad",
     },
-    "rc-29-mar": {
+    "rc-29-jun": {
       titulo: "Feria Sustentable - Río Cuarto",
-      fecha: "29 de Marzo, 2025",
+      fecha: "29 de junio, 2025",
       ubicacion: "Plaza Olmos",
     },
-    "sf-05-abr": {
+    "sf-05-jul": {
       titulo: "Feria Sustentable - San Francisco",
-      fecha: "05 de Abril, 2025",
+      fecha: "05 de julio, 2025",
       ubicacion: "Plaza 25 de Mayo",
     },
-    "vm-12-abr": {
+    "vm-12-jul": {
       titulo: "Feria Sustentable - Villa María",
-      fecha: "12 de Abril, 2025",
+      fecha: "12 de julio, 2025",
       ubicacion: "Parque Sobremonte",
     },
-    "lf-10-may": {
+    "lf-10-ago": {
       titulo: "Feria Sustentable - La Falda",
-      fecha: "10 de Mayo, 2025",
+      fecha: "10 de agosto, 2025",
       ubicacion: "Plaza Próspero Molina",
     },
   }

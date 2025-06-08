@@ -2817,6 +2817,99 @@ footer {
   text-align: center;
 }
 
+/* Codigo para pop up de chat en vivo */
+#chat-mock-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #388e3c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+#chat-mock-btn:hover {
+  background: #2e7031;
+}
+#chat-mock-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: inherit;
+}
+.chat-mock-hidden {
+  display: none !important;
+}
+.chat-mock-header {
+  background: #388e3c;
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+#chat-mock-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4em;
+  cursor: pointer;
+  line-height: 1;
+}
+.chat-mock-body {
+  padding: 16px;
+  min-height: 60px;
+  background: #f6f6f6;
+  font-size: 1em;
+}
+.chat-mock-message.bot {
+  background: #e0f2f1;
+  color: #222;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.chat-mock-footer {
+  padding: 10px 16px;
+  background: #fafafa;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #eee;
+}
+.chat-mock-footer input {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.chat-mock-footer button {
+  background: #388e3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 /* Responsive para ubicaciones */
 @media (max-width: 768px) {
   .ubicaciones-grid {

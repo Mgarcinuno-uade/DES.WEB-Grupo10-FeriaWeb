@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const chatBtn = document.getElementById('chat-mock-btn');
+  const chatPopup = document.getElementById('chat-mock-popup');
+  const chatClose = document.getElementById('chat-mock-close');
+
+  if (chatBtn && chatPopup && chatClose) {
+      chatBtn.addEventListener('click', function() {
+          chatPopup.classList.remove('chat-mock-hidden');
+          chatBtn.style.display = 'none';
+      });
+
+      chatClose.addEventListener('click', function() {
+          chatPopup.classList.add('chat-mock-hidden');
+          chatBtn.style.display = 'flex';
+      });
+  }
+  
   // Formulario de contacto
   const contactForm = document.getElementById("contactForm")
 

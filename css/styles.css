@@ -187,8 +187,8 @@ nav .menu a.active {
 /* Hero sections */
 .hero {
   /* Múltiples rutas para asegurar que funcione */
-  background-image: linear-gradient(rgba(76, 175, 80, 0.7), rgba(76, 175, 80, 0.8)), url("../img/hero-feria.jpg"),
-    url("img/hero-feria.jpg"), url("./img/hero-feria.jpg");
+  background-image: linear-gradient(rgba(76, 175, 80, 0.7), rgba(76, 175, 80, 0.8)), url("../img/hero-feria.webp"),
+    url("img/hero-feria.webp"), url("./img/hero-feria.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

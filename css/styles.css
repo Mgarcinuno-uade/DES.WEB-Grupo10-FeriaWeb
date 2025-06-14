@@ -3134,3 +3134,40 @@ footer {
     flex-direction: column;
   }
 }
+
+
+.seccion-compras {
+  background-color: var(--color-light);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.formulario-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario-compra label {
+  margin: 1rem 0 0.3rem;
+}
+
+.formulario-compra input,
+.formulario-compra select {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+#precioTotal {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+

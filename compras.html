@@ -52,7 +52,7 @@
                             <li>Incluye talleres para niños</li>
                             <li>Kit de bienvenida familiar</li>
                         </ul>
-                        <button class="btn">Obtener Descuento</button>
+                        <a href="#simulador"><button class="btn">Obtener Descuento</button></a>
                     </div>
 
                     <div class="descuento-card">
@@ -93,6 +93,24 @@
                 </div>
             </div>
         </section>
+<section class="seccion-compras" id="simulador">
+  <h2>Simulá tu compra</h2>
+  <div class="formulario-compra">
+    <label for="cantidadPersonas">Cantidad de personas:</label>
+    <input type="number" id="cantidadPersonas" min="1" value="1">
+
+    <label for="descuento">Seleccioná un descuento:</label>
+    <select id="descuento">
+      <option value="0">Sin descuento</option>
+      <option value="0.20">Descuento Estudiante (20%)</option>
+      <option value="0.30">Descuento Jubilado (30%)</option>
+      <option value="0.25">Descuento Familiar (25%)</option>
+      <option value="0.15">Descuento Grupos (15%)</option>
+    </select>
+
+    <p id="precioTotal">Total: $1000</p>
+  </div>
+</section>
 
         <!-- Formas de Pago -->
         <section class="formas-pago">
@@ -171,5 +189,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+
 </body>
 </html>

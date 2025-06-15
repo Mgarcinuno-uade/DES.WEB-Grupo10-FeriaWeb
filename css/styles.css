@@ -293,30 +293,15 @@ section {
 }
 
 /* Próximos eventos */
-.proximos-eventos {
-  background-color: #f8f9fa;
-  min-height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
+
 
 .eventos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
-.evento-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-medium);
-  transition: var(--transition);
-  position: relative;
-}
 
 .evento-card:hover {
   transform: translateY(-5px);
@@ -345,11 +330,7 @@ section {
   color: white;
 }
 
-.evento-card {
-  display: flex;
-  padding: 1.5rem;
-  gap: 1rem;
-}
+
 
 .evento-fecha {
   background-color: var(--color-primary);
@@ -383,6 +364,7 @@ section {
 }
 
 .evento-info h3 {
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: var(--color-dark);
 }
@@ -3036,10 +3018,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .evento-card {
-    flex-direction: column;
-    text-align: center;
-  }
+  
 
   .evento-acciones {
     flex-direction: row;
@@ -3175,3 +3154,30 @@ footer {
   font-weight: bold;
 }
 
+.proximos-eventos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.evento-card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-medium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.evento-info {
+  text-align: center;
+}
+
+.evento-info .ubicacion,
+.evento-info .horario {
+  justify-content: center;
+}

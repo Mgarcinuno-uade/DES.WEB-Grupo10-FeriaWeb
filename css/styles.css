@@ -295,6 +295,11 @@ section {
 /* Próximos eventos */
 .proximos-eventos {
   background-color: #f8f9fa;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .eventos-grid {

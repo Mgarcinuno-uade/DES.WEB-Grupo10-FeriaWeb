@@ -1,23 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  const cantidadInput = document.getElementById('cantidadPersonas');
-  const descuentoSelect = document.getElementById('descuento');
-  const precioTotal = document.getElementById('precioTotal');
-
-  const PRECIO_BASE = 1000;
-
-  function actualizarPrecio() {
-    const cantidad = parseInt(cantidadInput.value) || 1;
-    const descuento = parseFloat(descuentoSelect.value);
-    const total = cantidad * PRECIO_BASE * (1 - descuento);
-    precioTotal.textContent = `Total: $${total.toFixed(2)}`;
-  }
-
-  cantidadInput.addEventListener('input', actualizarPrecio);
-  descuentoSelect.addEventListener('change', actualizarPrecio);
-
-  actualizarPrecio(); // inicial
-
   // Menú responsive
   const menuToggle = document.querySelector(".menu-toggle")
   const menu = document.querySelector(".menu")
@@ -175,4 +156,23 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   images.forEach((img) => imageObserver.observe(img))
+  
+  const cantidadInput = document.getElementById('cantidadPersonas');
+  const descuentoSelect = document.getElementById('descuento');
+  const precioTotal = document.getElementById('precioTotal');
+
+  const PRECIO_BASE = 1000;
+
+  function actualizarPrecio() {
+    const cantidad = parseInt(cantidadInput.value) || 1;
+    const descuento = parseFloat(descuentoSelect.value);
+    const total = cantidad * PRECIO_BASE * (1 - descuento);
+    precioTotal.textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  cantidadInput.addEventListener('input', actualizarPrecio);
+  descuentoSelect.addEventListener('change', actualizarPrecio);
+
+  actualizarPrecio(); // inicial
+  
 })

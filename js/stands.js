@@ -122,60 +122,6 @@ function contactarCategoria(categoria) {
   window.location.href = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`
 }
 
-// Funciones para los expositores
-function contactarExpositor(expositor) {
-  const contactos = {
-    ecovida: {
-      email: "contacto@ecovida.com",
-      telefono: "+54 9 351 123-4567",
-      whatsapp: "5493511234567",
-    },
-    "verde-natural": {
-      email: "info@verdenatural.com",
-      telefono: "+54 9 351 234-5678",
-      whatsapp: "5493512345678",
-    },
-    "solar-tech": {
-      email: "ventas@solartech.com",
-      telefono: "+54 9 351 345-6789",
-      whatsapp: "5493513456789",
-    },
-    "textiles-eco": {
-      email: "contacto@textileseco.com",
-      telefono: "+54 9 351 456-7890",
-      whatsapp: "5493514567890",
-    },
-    "arte-reciclado": {
-      email: "info@arterreciclado.com",
-      telefono: "+54 9 351 567-8901",
-      whatsapp: "5493515678901",
-    },
-    "hogar-verde": {
-      email: "contacto@hogarverde.com",
-      telefono: "+54 9 351 678-9012",
-      whatsapp: "5493516789012",
-    },
-  }
-
-  const contacto = contactos[expositor]
-  if (contacto) {
-    const opciones = `Contactar con ${expositor}:\n\n1. Email: ${contacto.email}\n2. Teléfono: ${contacto.telefono}\n3. WhatsApp\n\n¿Qué opción prefieres?`
-
-    if (confirm(opciones + "\n\nPresiona OK para WhatsApp o Cancelar para Email")) {
-      // WhatsApp
-      window.open(
-        `https://wa.me/${contacto.whatsapp}?text=Hola, vi sus productos en la Feria Sustentable y me gustaría conocer más información.`,
-        "_blank",
-      )
-    } else {
-      // Email
-      const asunto = `Consulta desde Feria Sustentable`
-      const cuerpo = `Hola,\n\nVi sus productos en la Feria Sustentable y me gustaría conocer más información.\n\nGracias.`
-      window.location.href = `mailto:${contacto.email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`
-    }
-  }
-}
-
 function verProductosExpositor(expositor) {
   const productos = {
     ecovida: [
@@ -268,3 +214,35 @@ Para más información, visita: www.feriasustentable.com/expositores`
 
   alert("¡Información descargada! Revisa tu carpeta de descargas.")
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modalContacto');
+  const closeModal = document.querySelector('.close-modal');
+  const expositorInput = document.getElementById('expositor');
+
+  // Asociar botón de contacto
+  document.querySelectorAll('.expositor-contacto .btn').forEach(btn => {
+    if (btn.textContent.includes('Contactar')) {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.expositor-card');
+        const nombreExpositor = card.querySelector('h3')?.textContent || '';
+        expositorInput.value = nombreExpositor;
+        modal.classList.remove('hidden');
+      });
+    }
+  });
+
+  // Cerrar modal
+  closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.add('hidden');
+  });
+
+  // Validación y envío (solo ejemplo)
+  document.getElementById('formContactoExpositor').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Mensaje enviado correctamente.');
+    modal.classList.add('hidden');
+    this.reset();
+  });
+});
